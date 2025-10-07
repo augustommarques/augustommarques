@@ -22,11 +22,6 @@ Desenvolvedor Full Stack com foco em PHP e Laravel, atuando no desenvolvimento e
 ## Competências Técnicas
 
 <!-- SKILLS:START -->
-- Backend: PHP, Laravel, Node.js
-- Frontend: JavaScript, React, Vue.js
-- DevOps/Infra: Apache, Vercel, Linux
-- Banco de dados: MongoDB
-- Práticas: Clean Code, testes, automação de processos
 <!-- SKILLS:END -->
 
 ## Projetos em Destaque
