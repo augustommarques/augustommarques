@@ -15,12 +15,19 @@ Tenho base sólida em boas práticas de engenharia de software e sigo expandindo
 ## 🚧 Projetos em Destaque
 
 <!-- PROJECTS:START -->
-- [TabNews-clone](https://github.com/augustommarques/tabnews-clone): Repositório utilizado para o curso.dev.
+- [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
+- [Shell](https://github.com/augustommarques/Shell): Script linux
+- [tabnews-clone](https://github.com/augustommarques/tabnews-clone): Sem descrição.
+- [DiagramaJS](https://github.com/augustommarques/DiagramaJS): Sem descrição.
+- [React-source](https://github.com/augustommarques/React-source): Sem descrição.
+- [firebase-react](https://github.com/augustommarques/firebase-react): Sem descrição.
+- [Slotify-laravel](https://github.com/augustommarques/Slotify-laravel): Sem descrição.
+- [activity-note](https://github.com/augustommarques/activity-note): Sem descrição.
 <!-- PROJECTS:END -->
 
 ## Projetos em Desenvolvimento (Projetos com Issues Abertas)
 <!-- ISSUES_OPEN:START -->
-- (carregando...)
+- [tabnews-clone](https://github.com/augustommarques/tabnews-clone) — issues abertas: 11
 <!-- ISSUES_OPEN:END -->
 
 ## 📊 GitHub Stats
