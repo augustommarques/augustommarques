@@ -22,6 +22,8 @@ Desenvolvedor Full Stack com foco em PHP e Laravel, atuando no desenvolvimento e
 ## Competências Técnicas
 
 <!-- SKILLS:START -->
+- Backend: Php, Javascript, Typescript
+- Frontend: Javascript, Typescript, Vue
 <!-- SKILLS:END -->
 
 ## Projetos em Destaque
