@@ -23,15 +23,58 @@ jobs:
           script: |
             const fs = require('fs');
             const path = require('path');
+            const https = require('https');
 
             const username = 'augustommarques';
+            const PAT = process.env.PAT || '';
 
-            // Fetch repositories (public, non-fork, non-archived)
-            const repos = await github.paginate(github.rest.repos.listForUser, {
-              username,
-              per_page: 100,
-              sort: 'updated'
-            });
+            function fetchJson(url, token) {
+              return new Promise((resolve, reject) => {
+                const headers = { 'User-Agent': 'gha-update-projects' };
+                if (token) headers['Authorization'] = `Bearer ${token}`;
+                headers['Accept'] = 'application/vnd.github+json';
+                https.get(url, { headers }, (res) => {
+                  let data = '';
+                  res.on('data', chunk => data += chunk);
+                  res.on('end', () => {
+                    if (res.statusCode >= 200 && res.statusCode < 300) {
+                      try { resolve(JSON.parse(data)); } catch (e) { reject(e); }
+                    } else {
+                      reject(new Error(`GET ${url} -> ${res.statusCode}: ${data}`));
+                    }
+                  });
+                }).on('error', reject);
+              });
+            }
+
+            async function fetchAllRepos(token) {
+              // If PAT provided, fetch authenticated user's repos including private (owner affiliation)
+              let repos = [];
+              if (token) {
+                const base = 'https://api.github.com/user/repos?per_page=100&sort=updated&visibility=all&affiliation=owner';
+                let url = base;
+                while (url) {
+                  const page = await fetchJson(url, token);
+                  repos = repos.concat(page);
+                  // pagination via Link header is omitted for brevity; most users have < 100 repos
+                  if (page.length < 100) break;
+                  // fallback naive pagination (page=X)
+                  const nextPage = /[&?]page=(\d+)/.test(url) ? (parseInt(url.match(/[&?]page=(\d+)/)[1]) + 1) : 2;
+                  url = `${base}&page=${nextPage}`;
+                }
+              } else {
+                // public repos only
+                repos = await github.paginate(github.rest.repos.listForUser, {
+                  username,
+                  per_page: 100,
+                  sort: 'updated'
+                });
+              }
+              return repos;
+            }
+
+            // Fetch repositories (prefer PAT if available)
+            const repos = await fetchAllRepos(PAT);
 
             const filtered = repos
               .filter(r => !r.fork && !r.archived && !r.private)
@@ -62,6 +105,85 @@ jobs:
               .map(r => `- [${r.name}](${r.html_url}) — issues abertas: ${r.open_issues_count}`);
 
             updated = replaceBlock(updated, '<!-- ISSUES_OPEN:START -->', '<!-- ISSUES_OPEN:END -->', issuesOpen.length ? issuesOpen : ['- Nenhum projeto com issues abertas no momento.']);
+
+            // Build dynamic skills from repos: languages + topics heuristic
+            const languageCount = new Map();
+            for (const r of repos) {
+              if (r.language) {
+                const key = r.language.trim();
+                languageCount.set(key, (languageCount.get(key) || 0) + 1);
+              }
+            }
+
+            // Fetch topics for each repo (best effort, ignore failures)
+            const topicsPerRepo = [];
+            for (const r of repos) {
+              try {
+                if (PAT) {
+                  const t = await fetchJson(`https://api.github.com/repos/${r.owner.login}/${r.name}/topics`, PAT);
+                  topicsPerRepo.push(t.names || []);
+                } else {
+                  const resp = await github.request('GET /repos/{owner}/{repo}/topics', {
+                    owner: r.owner.login,
+                    repo: r.name,
+                    headers: { accept: 'application/vnd.github.mercy-preview+json' }
+                  });
+                  topicsPerRepo.push(resp.data.names || []);
+                }
+              } catch (e) {
+                topicsPerRepo.push([]);
+              }
+            }
+            const topicCount = new Map();
+            for (const arr of topicsPerRepo) {
+              for (const t of arr) {
+                const key = t.trim().toLowerCase();
+                topicCount.set(key, (topicCount.get(key) || 0) + 1);
+              }
+            }
+
+            function topN(map, n) {
+              return [...map.entries()].sort((a,b) => b[1]-a[1]).slice(0, n).map(([k]) => k);
+            }
+
+            const backends = ['php','javascript','typescript','nodejs','node.js','go','python'];
+            const frontends = ['javascript','typescript','html','css','vue','react','vue.js','react.js'];
+            const devops = ['docker','kubernetes','vercel','apache','nginx','linux'];
+            const databases = ['mongodb','mysql','postgresql','sqlite'];
+
+            const langsTop = topN(languageCount, 8).map(s => s.toLowerCase());
+            const topicsTop = topN(topicCount, 12);
+
+            function hasAny(candidates, pool) {
+              return candidates.filter(c => pool.includes(c));
+            }
+
+            const backendList = Array.from(new Set([...hasAny(backends, langsTop), ...hasAny(backends, topicsTop)])).map(s => s.replace('nodejs','Node.js').replace('node.js','Node.js')).map(s => s.charAt(0).toUpperCase() + s.slice(1));
+            const frontendList = Array.from(new Set([...hasAny(frontends, langsTop), ...hasAny(frontends, topicsTop)])).map(s => s.replace('vue.js','Vue.js').replace('react.js','React')).map(s => s.charAt(0).toUpperCase() + s.slice(1));
+            const devopsList = Array.from(new Set(hasAny(devops, topicsTop))).map(s => s.charAt(0).toUpperCase() + s.slice(1));
+            const dbList = Array.from(new Set(hasAny(databases, topicsTop))).map(s => s.charAt(0).toUpperCase() + s.slice(1));
+
+            let skillsLines = [
+              `- Backend: ${backendList.length ? backendList.join(', ') : ''}`,
+              `- Frontend: ${frontendList.length ? frontendList.join(', ') : ''}`,
+              `- DevOps/Infra: ${devopsList.length ? devopsList.join(', ') : ''}`,
+              `- Banco de dados: ${dbList.length ? dbList.join(', ') : ''}`,
+            ].filter(line => !line.endsWith(': '));
+
+            // Fallback estático, se ficar vazio
+            if (skillsLines.length === 0) {
+              const fs = require('fs');
+              const path = require('path');
+              const staticPath = path.join(process.cwd(), 'docs', 'skills_static.md');
+              if (fs.existsSync(staticPath)) {
+                const raw = fs.readFileSync(staticPath, 'utf8').split('\n').filter(l => l.trim().startsWith('- '));
+                skillsLines = raw.length ? raw : ['- (defina competências em docs/skills_static.md)'];
+              } else {
+                skillsLines = ['- (defina competências em docs/skills_static.md)'];
+              }
+            }
+
+            updated = replaceBlock(updated, '<!-- SKILLS:START -->', '<!-- SKILLS:END -->', skillsLines);
 
             if (updated !== original) {
               fs.writeFileSync(readmePath, updated, 'utf8');
