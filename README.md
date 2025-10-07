@@ -1,18 +1,35 @@
-# Olá, eu sou Augusto Marques!
+# Augusto Marques — Desenvolvedor Full Stack
 
-Desenvolvedor Full Stack com foco em PHP e Laravel, criando e mantendo sistemas web com qualidade e pragmatismo. Hoje atuo como PJ na Handson-TI Ltda e já trabalhei por 5 anos na Uranet Ltda.
+## Resumo
 
-Tenho base sólida em boas práticas de engenharia de software e sigo expandindo minha stack com React, Vue.js e Node.js.
+Desenvolvedor Full Stack com foco em PHP e Laravel, atuando no desenvolvimento e manutenção de sistemas web. Experiência como PJ na Handson-TI Ltda e 5 anos na Uranet Ltda. Comprometido com qualidade, boas práticas, automação e evolução contínua da stack (React, Vue.js, Node.js).
 
-## 🧑‍💻 Sobre mim
+## Experiência Profissional
 
-- Atuação atual: PJ na Handson-TI Ltda (desenvolvimento e manutenção de sistemas web)
-- Experiência anterior: 5 anos na Uranet Ltda em projetos de tecnologia
-- Formação: Pós-graduação em Engenharia de Software (Senac, em andamento)
-- Graduação: Sistemas de Informação (Faculdade Nove de Julho)
-- Interesses: arquiteturas web, clean code, testes e automação de processos
+- Handson-TI Ltda — Desenvolvedor (PJ)
+  - Desenvolvimento e manutenção de sistemas web em PHP/Laravel
+  - Entrega contínua, melhorias incrementais e suporte a demandas evolutivas
 
-## 🚧 Projetos em Destaque
+- Uranet Ltda — Desenvolvedor (5 anos)
+  - Participação em projetos diversos de tecnologia
+  - Atuação full stack, foco em qualidade e desempenho
+
+## Formação Acadêmica
+
+- Pós-graduação em Engenharia de Software — Senac (em andamento)
+- Bacharelado em Sistemas de Informação — Faculdade Nove de Julho
+
+## Competências Técnicas
+
+<!-- SKILLS:START -->
+- Backend: PHP, Laravel, Node.js
+- Frontend: JavaScript, React, Vue.js
+- DevOps/Infra: Apache, Vercel, Linux
+- Banco de dados: MongoDB
+- Práticas: Clean Code, testes, automação de processos
+<!-- SKILLS:END -->
+
+## Projetos em Destaque
 
 <!-- PROJECTS:START -->
 - [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
@@ -25,7 +42,7 @@ Tenho base sólida em boas práticas de engenharia de software e sigo expandindo
 - [activity-note](https://github.com/augustommarques/activity-note): Sem descrição.
 <!-- PROJECTS:END -->
 
-## Projetos em Desenvolvimento (Projetos com Issues Abertas)
+## Projetos com Issues Abertas
 <!-- ISSUES_OPEN:START -->
 - [tabnews-clone](https://github.com/augustommarques/tabnews-clone) — issues abertas: 11
 <!-- ISSUES_OPEN:END -->
