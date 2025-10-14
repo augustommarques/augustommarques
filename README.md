@@ -29,6 +29,7 @@ Desenvolvedor Full Stack com foco em PHP e Laravel, atuando no desenvolvimento e
 ## Projetos em Destaque
 
 <!-- PROJECTS:START -->
+- [ambiente-homolog](https://github.com/augustommarques/ambiente-homolog): Sem descrição.
 - [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
 - [Shell](https://github.com/augustommarques/Shell): Script linux
 - [tabnews-clone](https://github.com/augustommarques/tabnews-clone): Sem descrição.
@@ -36,7 +37,6 @@ Desenvolvedor Full Stack com foco em PHP e Laravel, atuando no desenvolvimento e
 - [React-source](https://github.com/augustommarques/React-source): Sem descrição.
 - [firebase-react](https://github.com/augustommarques/firebase-react): Sem descrição.
 - [Slotify-laravel](https://github.com/augustommarques/Slotify-laravel): Sem descrição.
-- [activity-note](https://github.com/augustommarques/activity-note): Sem descrição.
 <!-- PROJECTS:END -->
 
 ## Projetos com Issues Abertas
