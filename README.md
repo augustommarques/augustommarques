@@ -22,3 +22,8 @@
 - Backend: Php, Javascript, Typescript
 - Frontend: Javascript, Typescript, Html, Vue
 <!-- SKILLS:END -->
+### 📈 Estatísticas Gerais
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&hide_border=true&include_all_commits=true&count_private=true&show_icons=true" height="195" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&hide_border=true&locale=pt_BR" height="195" />
+</div>
