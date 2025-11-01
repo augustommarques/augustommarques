@@ -44,8 +44,6 @@ Veja mais detalhes em:
 ## Competências Técnicas
 
 <!-- SKILLS:START -->
-- Backend: Php, Javascript, Typescript
-- Frontend: Javascript, Typescript, Html, Vue
 <!-- SKILLS:END -->
 
 ## Projetos em Destaque
@@ -55,7 +53,6 @@ Veja mais detalhes em:
 
 ## Projetos com Issues Abertas
 <!-- ISSUES_OPEN:START -->
-- [tabnews-clone](https://github.com/augustommarques/tabnews-clone) — issues abertas: 11
 <!-- ISSUES_OPEN:END -->
 
 ## GitHub Stats
