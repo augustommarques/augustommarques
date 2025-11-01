@@ -66,14 +66,14 @@ Veja mais detalhes em:
 - [tabnews-clone](https://github.com/augustommarques/tabnews-clone) — issues abertas: 11
 <!-- ISSUES_OPEN:END -->
 
-##  GitHub Stats
+## GitHub Stats
 
 <div align="left">
   <a href="https://github.com/augustommarques">
-    <img src="https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&locale=pt-br&include_all_commits=true&count_private=true" height="195" style="margin-right: 10px;" />
+    <img src="https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&locale=pt-br&include_all_commits=true&count_private=true&hide_border=true" width="400" style="height: 280px; object-fit: contain; margin-right: 10px;" />
   </a>
   <a href="https://github.com/augustommarques">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true" height="195" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true&hide_border=true" width="400" style="height: 280px; object-fit: contain;" />
   </a>
 </div>
 
@@ -81,6 +81,6 @@ Veja mais detalhes em:
 
 <div align="left">
   <a href="https://github.com/augustommarques">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=augustommarques&layout=donut&theme=dracula&locale=pt-br" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=augustommarques&layout=donut&theme=dracula&locale=pt-br" alt="Top Languages" />
   </a>
 </div>
