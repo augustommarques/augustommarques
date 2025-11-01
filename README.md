@@ -68,8 +68,8 @@ Veja mais detalhes em:
 
 ## GitHub Stats
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&locale=pt-br&include_all_commits=true&count_private=true&hide_border=true)](https://github.com/augustommarques)
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true&hide_border=true)](https://github.com/augustommarques)
+<a href="https://github.com/augustommarques"><img src="https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&locale=pt-br&include_all_commits=true&count_private=true&hide_border=true" width="400" /></a>
+<a href="https://github.com/augustommarques"><img src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true&hide_border=true" width="400" /></a>
 
 ### Linguagens Mais Usadas
 
