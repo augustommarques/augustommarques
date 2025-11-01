@@ -1,0 +1,26 @@
+{
+  "name": "augustommarques-profile",
+  "version": "1.0.0",
+  "description": "Profile README with dynamic GitHub integration",
+  "main": "update-readme.js",
+  "scripts": {
+    "update-readme": "node update-readme.js",
+    "update-readme:auth": "node update-readme.js --token"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/augustommarques/augustommarques.git"
+  },
+  "keywords": [
+    "github",
+    "profile",
+    "readme",
+    "automation"
+  ],
+  "author": "Augusto Marques",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
+
