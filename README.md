@@ -66,16 +66,10 @@ Veja mais detalhes em:
 - [tabnews-clone](https://github.com/augustommarques/tabnews-clone) — issues abertas: 11
 <!-- ISSUES_OPEN:END -->
 
-##  GitHub Stats
+## GitHub Stats
 
-<a href="https://github.com/augustommarques">
-  <img align="left" src="https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&locale=pt-br&include_all_commits=true&count_private=true" height="195" alt="GitHub Stats" />
-</a>
-<a href="https://github.com/augustommarques">
-  <img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true" height="195" alt="GitHub Streak" />
-</a>
-
-<br clear="both" />
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&locale=pt-br&include_all_commits=true&count_private=true&hide_border=true)](https://github.com/augustommarques)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true&hide_border=true)](https://github.com/augustommarques)
 
 ### Linguagens Mais Usadas
 
