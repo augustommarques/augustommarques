@@ -44,8 +44,8 @@ Veja mais detalhes em:
 ## Competências Técnicas
 
 <!-- SKILLS:START -->
-- Backend: Php, Javascript, Typescript
-- Frontend: Javascript, Typescript, Html, Vue
+- Backend: Javascript, Typescript, Php
+- Frontend: Javascript, Html, Typescript, Vue
 <!-- SKILLS:END -->
 
 ## Projetos em Destaque
