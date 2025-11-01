@@ -68,13 +68,19 @@ Veja mais detalhes em:
 
 ## GitHub Stats
 
-<a href="https://github.com/augustommarques"><img src="https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&locale=pt-br&include_all_commits=true&count_private=true&hide_border=true" width="400" /></a>
-<a href="https://github.com/augustommarques"><img src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true&hide_border=true" width="400" /></a>
+<div align="left">
+  <a href="https://github.com/augustommarques">
+    <img src="https://github-readme-stats.vercel.app/api?username=augustommarques&theme=dracula&locale=pt-br&include_all_commits=true&count_private=true&hide_border=true" width="400" style="height: 280px; object-fit: contain; margin-right: 10px;" />
+  </a>
+  <a href="https://github.com/augustommarques">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true&hide_border=true" width="400" style="height: 280px; object-fit: contain;" />
+  </a>
+</div>
 
 ### Linguagens Mais Usadas
 
 <div align="left">
   <a href="https://github.com/augustommarques">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=augustommarques&layout=donut&theme=dracula&locale=pt-br" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=augustommarques&layout=donut&theme=dracula&locale=pt-br" alt="Top Languages" />
   </a>
 </div>
