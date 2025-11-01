@@ -15,30 +15,16 @@
 - Pós-graduação em Engenharia de Software — Senac (em andamento)
 - Bacharelado em Sistemas de Informação — Faculdade Nove de Julho
 
-## Git Actions
+## GitHub Actions
 
 O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente em [Actions](https://github.com/augustommarques/augustommarques/actions).
 
 <details>
-<summary>GitApi</summary>
+<summary>GitHub Actions — Guia Rápido</summary>
 
-### Localmente (Desenvolvimento)
-```bash
-# Instalar (se necessário)
-npm install
+  O GitHub Actions foi utilizado para automatizar a atualização do README com histórico de projetos e estatísticas do GitHub.
 
-# Atualizar README sem token (apenas repositórios públicos)
-npm run update-readme
-
-# Com token do GitHub (incluindo repositórios privados)
-npm run update-readme:auth ghp_seu_token
-```
-
-Veja mais detalhes em:
-- [update-readme-USAGE.md](update-readme-USAGE.md) - Como usar o script localmente
-- [docs/github-profile-guide.md](docs/github-profile-guide.md) - Guia completo para criar perfil profissional no GitHub
-- [docs/README-PRODUCTIVITY-DASHBOARD.md](docs/README-PRODUCTIVITY-DASHBOARD.md) - 📊 Template de Dashboard de Produtividade
-
+  Documentação: [GitHub Actions](https://docs.github.com/en/actions/get-started/quickstart)
 </details>
 
 ## Competências Técnicas
