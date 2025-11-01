@@ -2,7 +2,7 @@
     "name": "augustommarques",
     "version": "1.0.0",
     "description": "Competências Técnicas",
-    "main": "main.js",
+    "main": "index.js",
     "scripts": {
         "skills": "nodemon skills.js",
         "skills:deploy": "node skills.js"
