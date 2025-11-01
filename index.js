@@ -71,6 +71,27 @@ async function analyzeSkills(repos) {
   return result;
 }
 
+function updateSectionInReadme(startMarker, endMarker, contentLines) {
+  const readmePath = path.join(process.cwd(), 'README.md');
+  let readmeContent = fs.readFileSync(readmePath, 'utf8');
+  
+  const escapedStart = startMarker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const escapedEnd = endMarker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const pattern = new RegExp(`${escapedStart}[\\s\\S]*?${escapedEnd}`);
+  const newBlock = contentLines.length > 0 
+    ? `${startMarker}\n${contentLines.join('\n')}\n${endMarker}`
+    : `${startMarker}\n${endMarker}`;
+  
+  if (pattern.test(readmeContent)) {
+    readmeContent = readmeContent.replace(pattern, newBlock);
+  } else {
+    readmeContent = `${readmeContent.trim()}\n\n${newBlock}\n`;
+  }
+  
+  fs.writeFileSync(readmePath, readmeContent, 'utf8');
+  return readmeContent;
+}
+
 function updateSkillsInReadme(skills) {
   const labels = {
     backend: 'Backend',
@@ -88,27 +109,67 @@ function updateSkillsInReadme(skills) {
     skillsLines.push('- Frontend: Javascript, Typescript, Html, Vue');
   }
   
-  const readmePath = path.join(process.cwd(), 'README.md');
-  const readmeContent = fs.readFileSync(readmePath, 'utf8');
-  const startMarker = '<!-- SKILLS:START -->';
-  const endMarker = '<!-- SKILLS:END -->';
-  const escapedStart = startMarker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const escapedEnd = endMarker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const pattern = new RegExp(`${escapedStart}[\\s\\S]*?${escapedEnd}`);
-  const newBlock = `${startMarker}\n${skillsLines.join('\n')}\n${endMarker}`;
-  
-  const updatedContent = pattern.test(readmeContent)
-    ? readmeContent.replace(pattern, newBlock)
-    : `${readmeContent.trim()}\n\n${newBlock}\n`;
-  
-  fs.writeFileSync(readmePath, updatedContent, 'utf8');
-  console.log('README atualizado!');
+  updateSectionInReadme('<!-- SKILLS:START -->', '<!-- SKILLS:END -->', skillsLines);
+  console.log('Skills atualizado!');
   skillsLines.forEach(line => console.log(`  ${line}`));
+}
+
+async function getFeaturedProjects(repos) {
+  const featuredRepos = repos
+    .filter(r => !r.fork && !r.archived && !r.private)
+    .sort((a, b) => {
+      // Ordena por: estrelas primeiro, depois por data de atualização
+      const starsDiff = (b.stargazers_count || 0) - (a.stargazers_count || 0);
+      if (starsDiff !== 0) return starsDiff;
+      return new Date(b.pushed_at) - new Date(a.pushed_at);
+    })
+    .slice(0, 6);
+  
+  return featuredRepos.map(repo => {
+    const description = repo.description || 'Sem descrição.';
+    return `- [${repo.name}](${repo.html_url}): ${description}`;
+  });
+}
+
+async function getProjectsWithOpenIssues(repos) {
+  const projectsWithIssues = [];
+  
+  for (const repo of repos.slice(0, 20)) {
+    if (repo.fork || repo.archived || repo.private) continue;
+    
+    try {
+      // A API retorna issues e PRs, precisamos filtrar apenas issues (sem pull_request)
+      const issues = await api.get(`/repos/${repo.owner.login}/${repo.name}/issues`, {
+        params: { state: 'open', per_page: 100 }
+      });
+      
+      if (Array.isArray(issues)) {
+        // Filtrar apenas issues (sem pull_request field)
+        const onlyIssues = issues.filter(issue => !issue.pull_request);
+        const openIssuesCount = onlyIssues.length;
+        
+        if (openIssuesCount > 0) {
+          projectsWithIssues.push({
+            name: repo.name,
+            url: repo.html_url,
+            openIssues: openIssuesCount
+          });
+        }
+      }
+    } catch (error) {
+      // Continua mesmo se falhar
+    }
+  }
+  
+  return projectsWithIssues
+    .sort((a, b) => b.openIssues - a.openIssues)
+    .slice(0, 5)
+    .map(proj => `- [${proj.name}](${proj.url}) — issues abertas: ${proj.openIssues}`);
 }
 
 async function main() {
   try {
-    console.log(`Atualizando competências técnicas para ${username}...\n`);
+    console.log(`Atualizando README para ${username}...\n`);
     
     const repos = await api.getAllPaginated(`/users/${username}/repos`, {
       perPageParam: 'per_page',
@@ -120,10 +181,21 @@ async function main() {
       return;
     }
     
+    console.log('Atualizando competências técnicas...');
     const skills = await analyzeSkills(repos);
     updateSkillsInReadme(skills);
     
-    console.log('Concluído!');
+    console.log('\nAtualizando projetos em destaque...');
+    const featuredProjects = await getFeaturedProjects(repos);
+    updateSectionInReadme('<!-- PROJECTS:START -->', '<!-- PROJECTS:END -->', featuredProjects);
+    console.log(`  ${featuredProjects.length} projetos adicionados`);
+    
+    console.log('\nAtualizando projetos com issues abertas...');
+    const projectsWithIssues = await getProjectsWithOpenIssues(repos);
+    updateSectionInReadme('<!-- ISSUES_OPEN:START -->', '<!-- ISSUES_OPEN:END -->', projectsWithIssues);
+    console.log(`  ${projectsWithIssues.length} projetos com issues encontrados`);
+    
+    console.log('\n✅ README atualizado com sucesso!');
   } catch (error) {
     console.error('Erro:', error.message);
     if (error.url) console.error(`   URL: ${error.url}`);
