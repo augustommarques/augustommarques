@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "update-readme": "nodemon index.js",
-        "update-readme:deploy": "node index.js"
+        "update-readme:deploy": "node index.js",
+        "skills:deploy": "node index.js"
     },
     "author": "Augusto Marques",
     "license": "MIT",
