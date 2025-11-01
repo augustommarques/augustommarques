@@ -61,6 +61,7 @@ Veja mais detalhes em:
 
 ## Projetos com Issues Abertas
 <!-- ISSUES_OPEN:START -->
+- [augustommarques](https://github.com/augustommarques/augustommarques) — issues abertas: 1
 <!-- ISSUES_OPEN:END -->
 
 ## GitHub Stats
