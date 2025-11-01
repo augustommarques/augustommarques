@@ -51,14 +51,6 @@ Veja mais detalhes em:
 ## Projetos em Destaque
 
 <!-- PROJECTS:START -->
-- [vue-js-completo](https://github.com/augustommarques/vue-js-completo): Sem descrição.
-- [augustommarque](https://github.com/augustommarques/augustommarque): Sem descrição.
-- [ambiente-homolog](https://github.com/augustommarques/ambiente-homolog): Sem descrição.
-- [Shell](https://github.com/augustommarques/Shell): Script linux
-- [tabnews-clone](https://github.com/augustommarques/tabnews-clone): Sem descrição.
-- [React-source](https://github.com/augustommarques/React-source): Sem descrição.
-- [firebase-react](https://github.com/augustommarques/firebase-react): Sem descrição.
-- [Slotify-laravel](https://github.com/augustommarques/Slotify-laravel): Sem descrição.
 <!-- PROJECTS:END -->
 
 ## Projetos com Issues Abertas
