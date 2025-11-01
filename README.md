@@ -44,11 +44,19 @@ Veja mais detalhes em:
 ## Competências Técnicas
 
 <!-- SKILLS:START -->
+- Backend: Php, Javascript, Typescript
+- Frontend: Javascript, Typescript, Html, Vue
 <!-- SKILLS:END -->
 
 ## Projetos em Destaque
 
 <!-- PROJECTS:START -->
+- [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
+- [vue-js-completo](https://github.com/augustommarques/vue-js-completo): Sem descrição.
+- [ambiente-homolog](https://github.com/augustommarques/ambiente-homolog): Sem descrição.
+- [Shell](https://github.com/augustommarques/Shell): Script linux
+- [React-source](https://github.com/augustommarques/React-source): Sem descrição.
+- [firebase-react](https://github.com/augustommarques/firebase-react): Sem descrição.
 <!-- PROJECTS:END -->
 
 ## Projetos com Issues Abertas
