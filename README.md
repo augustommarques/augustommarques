@@ -37,7 +37,7 @@ O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente e
 ## Projetos em Destaque
 
 <!-- PROJECTS:START -->
-- [InertiaJS-SPA](https://github.com/augustommarques/InertiaJS-SPA): Sem descrição.
+- [spa-laravel](https://github.com/augustommarques/spa-laravel): Estudo SPA com laravel
 - [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
 - [vue-js-completo](https://github.com/augustommarques/vue-js-completo): Sem descrição.
 - [ambiente-homolog](https://github.com/augustommarques/ambiente-homolog): Sem descrição.
