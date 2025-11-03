@@ -37,12 +37,12 @@ O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente e
 ## Projetos em Destaque
 
 <!-- PROJECTS:START -->
-- [spa-laravel](https://github.com/augustommarques/spa-laravel): Estudo SPA com laravel
+- [spa-laravel](https://github.com/augustommarques/spa-laravel): Sem descrição.
 - [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
 - [vue-js-completo](https://github.com/augustommarques/vue-js-completo): Sem descrição.
-- [ambiente-homolog](https://github.com/augustommarques/ambiente-homolog): Sem descrição.
 - [Shell](https://github.com/augustommarques/Shell): Script linux
 - [React-source](https://github.com/augustommarques/React-source): Sem descrição.
+- [Slotify-laravel](https://github.com/augustommarques/Slotify-laravel): Sem descrição.
 <!-- PROJECTS:END -->
 
 ## Projetos com Issues Abertas
