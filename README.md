@@ -37,12 +37,12 @@ O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente e
 ## Projetos em Destaque
 
 <!-- PROJECTS:START -->
-- [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
+- [n8n-teste](https://github.com/augustommarques/n8n-teste): Sem descrição.
 - [node-react](https://github.com/augustommarques/node-react): Sem descrição.
+- [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
 - [laravel-dash](https://github.com/augustommarques/laravel-dash): Sem descrição.
 - [cod3r-vue](https://github.com/augustommarques/cod3r-vue): Sem descrição.
 - [spa-laravel](https://github.com/augustommarques/spa-laravel): A Laravel Single Page Application (SPA) with Inertia.js and Vue.js
-- [app_locadora_carros](https://github.com/augustommarques/app_locadora_carros): Sem descrição.
 <!-- PROJECTS:END -->
 
 ## Projetos com Issues Abertas
