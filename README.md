@@ -53,9 +53,13 @@ O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente e
 ## GitHub Stats
 
 <div align="left">
-  <a href="https://github.com/augustommarques">
-    <img src="https://github-readme-stats.vercel.app/api?username=augustommarques" width="400" style="height: 280px; object-fit: contain; margin-right: 10px;" />
-  </a>
+<a href="https://github.com/augustommarques">
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=augustommarques&show_icons=true&theme=default"
+    width="400"
+    height="280"
+  />
+</a>
   <a href="https://github.com/augustommarques">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true&hide_border=true" width="400" style="height: 280px; object-fit: contain;" />
   </a>
