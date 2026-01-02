@@ -51,15 +51,11 @@ O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente e
 <!-- ISSUES_OPEN:END -->
 
 ## GitHub Stats
-[https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=augustommarques&show_icons=true&theme=dracula](https://github-readme-stats-anuraghazra1.vercel.app/api?username=augustommarques&show_icons=true)
+[https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=augustommarques&show_icons=true&theme=dracula]()
 <div align="left">
-<a href="https://github.com/augustommarques">
-  <img
-    src=""
-    width="400"
-    height="280"
-  />
-</a>
+  <a href="https://github.com/augustommarques">
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=augustommarques&show_icons=true" width="400" style="height: 280px; object-fit: contain;" />
+  </a>
   <a href="https://github.com/augustommarques">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=augustommarques&theme=dracula&locale=pt_BR&count_private=true&hide_border=true" width="400" style="height: 280px; object-fit: contain;" />
   </a>
