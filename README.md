@@ -37,12 +37,12 @@ O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente e
 ## Projetos em Destaque
 
 <!-- PROJECTS:START -->
+- [n8n](https://github.com/augustommarques/n8n): Teste n8n e Traefik, com HTTPS, autenticação básica, fuso America/Sao_Paulo, limpeza de execuções e volume persistente.
 - [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
 - [Vue](https://github.com/augustommarques/Vue): Sem descrição.
 - [ReactJS-SOLID](https://github.com/augustommarques/ReactJS-SOLID): Sem descrição.
 - [vue-finances-back](https://github.com/augustommarques/vue-finances-back): Sem descrição.
 - [Python](https://github.com/augustommarques/Python): Sem descrição.
-- [user](https://github.com/augustommarques/user): Sem descrição.
 <!-- PROJECTS:END -->
 
 ## Projetos com Issues Abertas
