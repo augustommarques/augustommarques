@@ -42,7 +42,7 @@ O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente e
 - [ReactJS-SOLID](https://github.com/augustommarques/ReactJS-SOLID): Sem descrição.
 - [vue-finances-back](https://github.com/augustommarques/vue-finances-back): Sem descrição.
 - [Python](https://github.com/augustommarques/Python): Sem descrição.
-- [node-react](https://github.com/augustommarques/node-react): Sem descrição.
+- [user](https://github.com/augustommarques/user): Sem descrição.
 <!-- PROJECTS:END -->
 
 ## Projetos com Issues Abertas
