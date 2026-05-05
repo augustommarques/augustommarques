@@ -37,8 +37,8 @@ O README é atualizado automaticamente todos os dias às 6h UTC ou manualmente e
 ## Projetos em Destaque
 
 <!-- PROJECTS:START -->
-- [teste](https://github.com/augustommarques/teste): Sem descrição.
 - [augustommarques](https://github.com/augustommarques/augustommarques): Sem descrição.
+- [teste](https://github.com/augustommarques/teste): Sem descrição.
 - [nlw-2023](https://github.com/augustommarques/nlw-2023): Sem descrição.
 - [n8n](https://github.com/augustommarques/n8n): Teste n8n e Traefik, com HTTPS, autenticação básica, fuso America/Sao_Paulo, limpeza de execuções e volume persistente.
 - [node-api-backend](https://github.com/augustommarques/node-api-backend): Sem descrição.
